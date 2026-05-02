@@ -18,18 +18,21 @@ Default training constants in the notebook include **`DEFAULT_BATCH_SIZE = 32`**
 
 ## Figures (static assets)
 
-Representative visuals live under [`docs/`](docs/). The confusion matrix shows an **illustrative** diagonal-heavy pattern aligned with qualitative results from DenseNet runs; regenerate plots from your own checkpoints inside the notebook for publication-quality figures.
+Representative visuals live under [`docs/`](docs/). GitHub often **does not reliably render SVG** images in Markdown (CDN / CSP quirks), so the README embeds **PNG** files for the previews below—this is intentional. The confusion matrix numbers are **illustrative**; regenerate plots from your own checkpoints inside the notebook for publication-quality figures. PNGs can be regenerated with [`docs/_generate_readme_pngs.py`](docs/_generate_readme_pngs.py).
 
-| Preview | File |
-|--------|------|
-| Confusion matrix (illustrative) | [`docs/confusion_matrix.svg`](docs/confusion_matrix.svg) |
-| Grad-CAM layout | [`docs/gradcam_montage.svg`](docs/gradcam_montage.svg) |
-| W&B / experiment tracking | [`docs/wandb_projects.svg`](docs/wandb_projects.svg) |
+| Preview | Raster (recommended for README) | Vector (editing only) |
+|--------|-----|------|
+| Confusion matrix (illustrative) | [`docs/confusion_matrix.png`](docs/confusion_matrix.png) | [`docs/confusion_matrix.svg`](docs/confusion_matrix.svg) |
+| Grad-CAM montage schematic | [`docs/gradcam_montage.png`](docs/gradcam_montage.png) | [`docs/gradcam_montage.svg`](docs/gradcam_montage.svg) |
+| W&B / experiment tracking | [`docs/wandb_projects.png`](docs/wandb_projects.png) | [`docs/wandb_projects.svg`](docs/wandb_projects.svg) |
 
 <p align="center">
-  <img src="docs/confusion_matrix.svg" alt="Confusion matrix heatmap" width="360" />
+  <img src="docs/confusion_matrix.png" alt="Illustrative confusion matrix (normalized)" width="400" />
   &nbsp;&nbsp;
-  <img src="docs/gradcam_montage.svg" alt="Grad-CAM montage schematic" width="420" />
+  <img src="docs/gradcam_montage.png" alt="Grad-CAM montage schematic" width="480" />
+</p>
+<p align="center">
+  <img src="docs/wandb_projects.png" alt="Experiment tracking schematic" width="480" />
 </p>
 
 ## Dataset layout
@@ -49,7 +52,7 @@ The widely used **OCT2017** collection is described in the literature (e.g. Kerm
 | Path | Contents |
 |------|----------|
 | [`notebooks/oct-classification.ipynb`](notebooks/oct-classification.ipynb) | Main training, evaluation, W&B sweep, and Grad-CAM code (exported from Kaggle; Python **3.12**). **Outputs are cleared** in git for a fast GitHub diff—re-run cells locally or on [Kaggle](https://www.kaggle.com/) to materialize plots and metrics. |
-| [`docs/`](docs/) | README figures (SVG): confusion matrix, Grad-CAM montage, W&B schematic. |
+| [`docs/`](docs/) | README figures (**PNG** for GitHub; **SVG** for editing): confusion matrix, Grad-CAM montage, W&B schematic; regenerate PNGs via `_generate_readme_pngs.py`. |
 | [`paper/OCT_Classification_Report.pdf`](paper/OCT_Classification_Report.pdf) | Course / project write-up (PDF). |
 
 ## Setup
