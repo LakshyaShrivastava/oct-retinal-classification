@@ -1,0 +1,8 @@
+# Pin versions to match your Kaggle notebook after you copy it here.
+torch
+torchvision
+numpy
+pandas
+matplotlib
+scikit-learn
+wandb
