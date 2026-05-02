@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="200" viewBox="0 0 480 200" font-family="system-ui, Segoe UI, sans-serif">
+  <title>W&amp;B experiment tracking hint</title>
+  <rect width="480" height="200" rx="8" fill="#1e1e1e"/>
+  <rect x="12" y="12" width="456" height="28" rx="4" fill="#2d2d2d"/>
+  <circle cx="28" cy="26" r="5" fill="#ff5f56"/><circle cx="46" cy="26" r="5" fill="#ffbd2e"/><circle cx="64" cy="26" r="5" fill="#27ca40"/>
+  <text x="88" y="30" fill="#cfcfcf" font-size="11">wandb.ai · project oct-densenet</text>
+  <rect x="12" y="52" width="200" height="132" rx="6" fill="#252525"/>
+  <text x="24" y="78" fill="#9cdcfe" font-size="11" font-family="Consolas, monospace">val_f1 ‘</text>
+  <polyline fill="none" stroke="#569cd6" stroke-width="2" points="32,118 72,104 112,92 152,82 172,74"/>
+  <text x="24" y="168" fill="#858585" font-size="10">Bayes sweep · val macro F1</text>
+  <rect x="228" y="52" width="240" height="60" rx="6" fill="#252525"/>
+  <text x="240" y="78" fill="#ce9178" font-size="10" font-family="Consolas, monospace">batch_lr · backbone_lr · dropout</text>
+  <text x="240" y="98" fill="#858585" font-size="10">Hyperparameters tracked per run</text>
+  <rect x="228" y="124" width="240" height="60" rx="6" fill="#252525"/>
+  <text x="240" y="154" fill="#b5cea8" font-size="10" font-family="Consolas, monospace">wandb.login() ’ dashboards</text>
+</svg>

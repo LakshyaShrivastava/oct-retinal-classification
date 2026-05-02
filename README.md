@@ -16,6 +16,22 @@ Four-way classification of **retinal OCT** slices with **`torchvision` DenseNet-
 
 Default training constants in the notebook include **`DEFAULT_BATCH_SIZE = 32`**, **`DEFAULT_EPOCHS = 8`**, **`NUM_CLASSES = 4`**, **`IMAGE_SIZE = 224`**. Reported accuracy in the mid-**90%** range and strong macro **F1** depend on your runs—check **W&B** and executed notebook outputs.
 
+## Figures (static assets)
+
+Representative visuals live under [`docs/`](docs/). The confusion matrix shows an **illustrative** diagonal-heavy pattern aligned with qualitative results from DenseNet runs; regenerate plots from your own checkpoints inside the notebook for publication-quality figures.
+
+| Preview | File |
+|--------|------|
+| Confusion matrix (illustrative) | [`docs/confusion_matrix.svg`](docs/confusion_matrix.svg) |
+| Grad-CAM layout | [`docs/gradcam_montage.svg`](docs/gradcam_montage.svg) |
+| W&B / experiment tracking | [`docs/wandb_projects.svg`](docs/wandb_projects.svg) |
+
+<p align="center">
+  <img src="docs/confusion_matrix.svg" alt="Confusion matrix heatmap" width="360" />
+  &nbsp;&nbsp;
+  <img src="docs/gradcam_montage.svg" alt="Grad-CAM montage schematic" width="420" />
+</p>
+
 ## Dataset layout
 
 The notebook expects a root directory containing **`train/`** and **`test/`**, each with **one subdirectory per class** (labels = folder names).
@@ -32,8 +48,9 @@ The widely used **OCT2017** collection is described in the literature (e.g. Kerm
 
 | Path | Contents |
 |------|----------|
-| [`notebooks/oct-classification.ipynb`](notebooks/oct-classification.ipynb) | Main training, evaluation, W&B sweep, and Grad-CAM code (exported from Kaggle; Python **3.12**). |
-| [`paper/`](paper/) | Course / project write-up (**PDF**) when you add it. |
+| [`notebooks/oct-classification.ipynb`](notebooks/oct-classification.ipynb) | Main training, evaluation, W&B sweep, and Grad-CAM code (exported from Kaggle; Python **3.12**). **Outputs are cleared** in git for a fast GitHub diff—re-run cells locally or on [Kaggle](https://www.kaggle.com/) to materialize plots and metrics. |
+| [`docs/`](docs/) | README figures (SVG): confusion matrix, Grad-CAM montage, W&B schematic. |
+| [`paper/OCT_Classification_Report.pdf`](paper/OCT_Classification_Report.pdf) | Course / project write-up (PDF). |
 
 ## Setup
 
@@ -46,6 +63,10 @@ pip install -r requirements.txt
 Install **GPU-enabled** `torch` / `torchvision` if needed using the selector at [pytorch.org](https://pytorch.org/get-started/locally/).
 
 **W&B:** run `wandb login` before experiments that call `wandb.init`. Sweep cells call `wandb.sweep` / `wandb.agent`; reduce `count` or comment those cells if you only want single runs.
+
+## License
+
+Notebook and repository code are licensed under the **Apache License 2.0** — see [`LICENSE`](LICENSE). **Image data are not redistributed** here; obtain **OCT2017** (or your bundle) under the license and citation terms of the provider you use (e.g. Kaggle or the original release). The write-up PDF in `paper/` is part of this project’s documentation; if you mirror or adapt it, respect your institution’s policies and any third-party terms in the PDF.
 
 ## Author
 
