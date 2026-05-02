@@ -1,8 +1,11 @@
-# Pin versions to match your Kaggle notebook after you copy it here.
-torch
-torchvision
-numpy
-pandas
-matplotlib
-scikit-learn
-wandb
+# PyTorch: pick CUDA vs CPU wheels from https://pytorch.org/get-started/locally/
+# Example (CUDA 12.1): pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+torch>=2.2.0,<3
+torchvision>=0.17.0
+numpy>=1.26.0
+scikit-learn>=1.4.0
+matplotlib>=3.8.0
+Pillow>=10.2.0
+wandb>=0.16.0
+grad-cam>=1.5.4
+opencv-python-headless>=4.9.0
